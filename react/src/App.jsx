@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import imageToyota from "./images/Toyota.jpg";
 
 function Header({name}) {
   return (
     <header>
-      <h1>{name} React App</h1>
+      <h3>{name} React App</h3>
 
     </header>
   );
@@ -45,14 +45,19 @@ function List({cars}){
 }
 
 function App() {
+  const [status, setStatus] = useState(true);
+ // const [status, dispatch] = useReducer((status) => !status, true);
   return (
     <div>
+      <h1>Car Dealership is currently {" "} {status ? "Open" : "Closed"} </h1>
+
+      <button onClick={() => setStatus(!status)}>{status ? "Close" : "Open"} Dealership</button>
       <Header name="Sakhumzi's"/>
 
       <List cars={carObjects} />
 
       <main>
-        <p>Welcome to my React app!</p>
+        
       </main>
     </div>
   );
