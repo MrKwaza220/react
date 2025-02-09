@@ -25,6 +25,7 @@ function Header(){
           <Link href="/">Home</Link>
           <Link href="/mountain">Mountain</Link>
           <Link href="/hotels">Hotels</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
       </div>
     </header>
