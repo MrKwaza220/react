@@ -16,6 +16,17 @@ function App() {
           for science, for their love of fun, and their dedication to education.
         </p>
         <ListCast />
+
+        {memberInfo &&
+        <article>
+          <hgroup>
+            <div>
+              <img src={`images/${memberInfo.slug}`} alt={memberInfo.name} />
+              <h1>{memberInfo.name}</h1>
+              <p>{memberInfo.bio}</p>
+            </div>
+          </hgroup>
+          </article>}
       </hgroup>
     </div>
   );
