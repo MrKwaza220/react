@@ -18,7 +18,7 @@ export default ({ cast, onChoice }) => {
                   >
                     {cast.name}
                   </a>
-                </li>
+                </li>;
               })}
             </ul>
           </details>
@@ -26,7 +26,13 @@ export default ({ cast, onChoice }) => {
       </ul>
       <ul>
         <li>
-            <a href="#"><img style={{height: '50px'}} src="images/logo_bug_stargazers.svg" alt="Stargazers" /></a>
+          <a href="#">
+            <img
+              style={{ height: "50px" }}
+              src="images/logo_bug_stargazers.svg"
+              alt="Stargazers"
+            />
+          </a>
         </li>
       </ul>
     </nav>
