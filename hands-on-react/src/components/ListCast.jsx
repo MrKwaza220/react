@@ -1,16 +1,5 @@
-import { useState, useEffect } from "react";
 
-export default () => {
-  const [cast, setCast] = useState([]);
-
-  async function fetchCast() {
-    const response = await fetch("cast.json");
-    setCast(await response.json());
-  }
-
-  useEffect(() => {
-    fetchCast();
-  });
+export default ({cast, onChoice }) => {
 
   return (
     <div
@@ -22,8 +11,14 @@ export default () => {
       }}
     >
       {" "}
-      {cast.map((member) => (
-        <a key={member.id} data-tooltip={member.name}>
+      {cast.map(member => (
+        <a
+          onClick={() => {
+            onChoice(member)
+          }}
+          key={member.id}
+          data-tooltip={member.name}
+        >
           <img sr={`images/${member.slug}_tn.svg`} alt={member.name} />
         </a>
       ))}
