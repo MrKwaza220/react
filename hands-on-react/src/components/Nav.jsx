@@ -8,7 +8,7 @@ export default ({ cast, onChoice }) => {
               Cast
             </summary>
             <ul role="listbox">
-              {cast.map((member) => {
+              {cast.map((member) => (
                 <li key={member.id}>
                   <a
                     onClick={() => {
@@ -16,10 +16,10 @@ export default ({ cast, onChoice }) => {
                     }}
                     data-tooltip={member.name}
                   >
-                    {cast.name}
+                    {member.name}
                   </a>
-                </li>;
-              })}
+                </li>
+              ))}
             </ul>
           </details>
         </li>

@@ -36,7 +36,7 @@ function App() {
             setMemberInfo(info);
           }}
         />
-        {memberInfo && <Modals member={memberInfo} handleClose={() => {setMemberInfo(null)}} />}
+        {memberInfo && <Modals member={memberInfo} handleChange={(info) => {setMemberInfo(cast[info])}} handleClose={() => {setMemberInfo(null)}} />}
       </hgroup>
     </div>
     </>
