@@ -1,6 +1,4 @@
-:root {
-  --primary: #43a047!important;
-}
+@import "@picocss/pico";
 
 h1, h2, h3, h4, h5, h6, b{
   color: var(--primary);
