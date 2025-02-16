@@ -1,4 +1,4 @@
-import { SmallPersonItem } from "./people/SmallPersonListItem";
+import { SmallPersonListItem } from "./people/SmallPersonListItem";
 import { RegularList } from "./RegularList";
 import { SplitScreen } from "./SplitScreen";
 
@@ -52,8 +52,9 @@ function App() {
     <RegularList 
     items={people}
     resourceName='person'
-    itemComponent={SmallPersonItem}
+    itemComponent={SmallPersonListItem}
     />
+
   );
 }
 
