@@ -19,7 +19,7 @@ export const SplitScreen = ({
             {left}
             </Pane>
             <Pane weight={rightWeight}>
-            {right}
+            {right  }
             </Pane>
         </Container>
     );
