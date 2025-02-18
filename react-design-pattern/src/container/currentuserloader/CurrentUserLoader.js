@@ -1,27 +1,28 @@
-import React, {useSate, useEffect, Children} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const CurrentUserLoader = ({Children}) => {
-    const [user, setUser] = useSate(null);
+export const CurrentUserLoader = ({ children }) => {
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
         (async () => {
-            const response = await axios.get('/curent-user');
-            setUser(response.data);
+            try {
+                const response = await axios.get('/current-user');
+                setUser(response.data);
+            } catch (error) {
+                console.error("Failed to load current user:", error);
+            }
         })();
-    },[] )
+    }, []);
 
-    return(
+    return (
         <>
-            {React.Children.map(Children, child => {
-                if(React.isValidElement(child)) {
+            {React.Children.map(children, child => {
+                if (React.isValidElement(child)) {
                     return React.cloneElement(child, { user });
                 }
-
                 return child;
-            })
-
-            }
+            })}
         </>
-    )
-}
+    );
+};
