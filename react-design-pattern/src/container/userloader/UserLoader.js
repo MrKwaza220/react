@@ -7,13 +7,13 @@ export const UserLoader = ({ children }) => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get(`/users/${userId}`);
+                const response = await axios.get(`/users/${user}`);
                 setUser(response.data);
             } catch (error) {
                 console.error("Failed to load current user:", error);
             }
         })();
-    }, [userId]);
+    }, [user]);
 
     return (
         <>
