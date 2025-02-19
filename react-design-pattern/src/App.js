@@ -1,10 +1,9 @@
-import { CurrentUserLoader } from "./container/currentuserloader/CurrentUserLoader";
-
+import { ControlledForm } from "./components/controlledform/ControlledForm";
 
 function App() {
   return (
       <>
-          <h1>User and Products</h1>
+          <ControlledForm />
       </>
   );
 }
