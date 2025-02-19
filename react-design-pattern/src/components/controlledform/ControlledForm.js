@@ -10,8 +10,10 @@ export const ControlledForm = () => {
     useEffect(() => {
         if(name.length < 3) {
            setError("Name must be at least 3 characters long");
+           console.log("Name must be at least 3 character long!")
         } else {
             setError("Goood to go");
+            console.log("Good to go!")
         }
     }, [name]);
     return(
@@ -23,7 +25,7 @@ export const ControlledForm = () => {
                 value={name}
                 onChange={e => setName(e.target.value)}
             />
-            <p>{error}</p>
+            <p style={{color: 'red'}}>{error}</p>
             <input
                 name="age"
                 type="number"
