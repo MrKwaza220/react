@@ -1,4 +1,4 @@
-export const UserInfor = ({ user }) => {
+export const UserInfo = ({ user }) => {
     if (!user) {
         return <p>Loading...</p>;
     }
