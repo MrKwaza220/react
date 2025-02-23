@@ -1,5 +1,4 @@
-import { ProductInfor } from "./customhooks/productinfor/Productinfor";
-import { UserInfor } from "./customhooks/userinfor/UserInfor";
+import { HomeFunc } from "./functionalprogramming/homefunc/HomeFunc";
 
 function App() {
 
