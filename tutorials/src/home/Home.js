@@ -1,22 +1,22 @@
 const Home = () => {
-  function calculate(a, b) {
-    const add = a + b;
-    const subtract = a - b;
-    const multiply = a * b;
-    const divide = a / b;
+ const myVehicle = {
+   brand: 'Ford',
+   model: 'Mustang',
+   color: 'red'
+ }
 
-    return [add, subtract, multiply, divide];
-  }
-  const [add, subtract, multiply, divide] = calculate(7, 9);
+ const updateMyVehicle = {
+  type: 'car',
+  year: 2021,
+  color: 'yellow'
+ }
+
+ const myUpdateMyVehicle = {...myVehicle, ...updateMyVehicle}
+
+ console.log(myUpdateMyVehicle)
   return (
     <>
-      <h1>My Numbers</h1>
-      <ul>
-        <li>{add}</li>
-        <li>{subtract}</li>
-        <li>{multiply}</li>
-        <li>{divide}</li>
-      </ul>
+      <h1>My </h1>
     </>
   );
 };
