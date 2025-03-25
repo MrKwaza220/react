@@ -1,27 +1,19 @@
-import React, { useState } from "react";
+interface Props {
+    name: string;
+    age: number;
+    isMarried: boolean;
+  }
 
-export interface HomeProps {
-  name: string;
-  age: number;
-  isMarried: boolean;
-}
-
-const Home = (props: HomeProps) => {
-  const [isShowInfo, setIsShowInfo] = useState<boolean>(false);
-
-  const toggleInfo = () => {
-    setIsShowInfo((prev) => !prev);
-  };
+const Home = (props: Props) => {
+ 
   return (
+
     <div>
-      {isShowInfo && (
-        <>
-          <p>Name: {props.name}</p>
-          <p>Age: {props.age}</p>
-          <p>Status: {props.isMarried ? "is Married" : "is Single"}</p>
-        </>
-      )}
-        <button onClick={toggleInfo}>Show Info</button>
+      <>
+        <p>Name: {props.name}</p>
+        <p>Age: {props.age}</p>
+        <p>Status: {props.isMarried ? "is Married" : "is Single"}</p>
+      </>
     </div>
   );
 };
